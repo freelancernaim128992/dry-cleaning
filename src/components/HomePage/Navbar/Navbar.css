@@ -1,0 +1,17 @@
+.nav-container{
+    padding: 10px;
+}
+.logo-style{
+    width: 200px;
+}
+.menu-container{
+    width: 700px;
+    margin: auto;
+    font-weight: 700;
+}
+.menu-container li a{
+    color: #00608a !important;
+}
+.menu-container li a:hover{
+    color: #29beff !important;
+}

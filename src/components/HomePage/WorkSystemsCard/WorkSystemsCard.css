@@ -1,0 +1,17 @@
+.icon{
+    transition: .5s;
+}
+.icon:hover{
+    background-color: #00608a;
+    border-radius: 50%;
+    width: 55%;
+    height: 55%;
+    padding: 10px;
+}
+.icon i{
+    font-size: 80px;
+    color: #27beff;
+}
+.icon i:hover{
+    color: #fff;
+}
