@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="nav-container shadow rounded">
           <nav className="navbar navbar-expand-lg navbar-light">
             <div className="container">
-              <a className="navbar-brand" href="#">
+              <a className="navbar-brand" href="/">
                 <img src={logo} className="img-fluid logo-style" alt=""/>
               </a>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,19 +18,19 @@ const Navbar = () => {
               <div className="collapse navbar-collapse " id="navbarTogglerDemo02">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0 menu-container">
                   <li className="nav-item ms-5">
-                    <a className="nav-link" href="#">Home</a>
+                    <a className="nav-link" href="/home">Home</a>
                   </li>
                   <li className="nav-item ms-5">
-                    <a className="nav-link" href="#">About Us</a>
+                    <a className="nav-link" href="/about">About Us</a>
                   </li>
                   <li className="nav-item ms-5">
-                    <a className="nav-link" href="#">Services</a>
+                    <a className="nav-link" href="/services">Services</a>
                   </li>
                   <li className="nav-item ms-5">
-                    <a className="nav-link" href="#">Reviews</a>
+                    <a className="nav-link" href="/reviews">Reviews</a>
                   </li>
                   <li className="nav-item ms-5">
-                    <a className="nav-link" href="#">Contact Us</a>
+                    <a className="nav-link" href="/contact">Contact Us</a>
                   </li>
                 </ul>
                 <Link to="/login"><button className="btn btn-brand">LogIn</button></Link>

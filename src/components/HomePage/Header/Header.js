@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderMain from '../HeaderMain/HeaderMain';
-import Navbar from '../Navbar/Navbar';
+import Navbar from '../../ShareComponents/Navbar/Navbar'
 import headerBg from '../../../images/header-bg.jpg'
 
 const Header = () => {

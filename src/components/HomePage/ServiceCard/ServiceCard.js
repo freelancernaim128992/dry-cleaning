@@ -3,13 +3,13 @@ import './ServiceCard.css'
 
 const ServiceCard = ({info}) => {
     return (
-        <div className="col-md-3 text-center shadow rounded me-3 card-container">
-            <div class="card" class="card-info">
-                <img src={info.img} class="card-img-top image-style" alt="..." />
-                <div class="card-body">
-                    <h4>{info.name}</h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, fuga? Aperiam ratione debitis eius cumque?</p>
-                </div>
+        <div className="col-md-3 text-center">
+            <div>
+                <img src={info.img} className="img-fluid image-style" alt=""/>
+            </div>
+            <div className="mt-5">
+                <h4>{info.name}</h4>
+                <p className="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid minima expedita cumque veritatis, nemo error.</p>
             </div>
         </div>
     );

@@ -1,0 +1,20 @@
+.social-media li {
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #2ebfff;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    transition: all 0.5s;
+}
+.social-media li a {
+    color: white;
+    font-size: 25px;
+    margin-left: 5px;
+}
+.social-media li:hover{
+    background-color:#2ebfff;
+}
+footer{
+    background-color: #05405a;
+}

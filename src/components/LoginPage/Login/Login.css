@@ -1,0 +1,20 @@
+.login-container{
+    margin-bottom: 126px;
+}
+.loginBtn {
+    width: 320px;
+    border: 1px solid #05405a;
+    border-radius: 20px;
+    height: 43px;
+}
+.loginBtn button{
+    font-size: 17px;
+    font-weight: 700;
+    color: #25bdff;
+}
+.loginBtn:hover{
+    background-color: #00608a;
+}
+.loginBtn:hover button{
+    color:white;
+}

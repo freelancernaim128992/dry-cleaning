@@ -4,6 +4,7 @@ import gowns from '../../../images/gowns.jpg'
 import leather from '../../../images/leather.jpeg'
 import curtains from '../../../images/curtains.png'
 import ServiceCard from '../ServiceCard/ServiceCard';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
     const serviceData = [
@@ -36,6 +37,9 @@ const Services = () => {
                         serviceData.map(serviceInfo => <ServiceCard info={serviceInfo}></ServiceCard>)
                     }
                 </div>
+            </div>
+            <div className="d-flex justify-content-center">
+                <Link to="/"><button className="btn btn-brand">Explore More</button></Link>
             </div>
         </section>
     );

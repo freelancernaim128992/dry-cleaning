@@ -1,10 +1,10 @@
 @font-face {
     font-family: "flaticon";
-    src: url("./flaticon.ttf?247d7e6d633e064a98be4d386fa8c19a") format("truetype"),
-url("./flaticon.woff?247d7e6d633e064a98be4d386fa8c19a") format("woff"),
-url("./flaticon.woff2?247d7e6d633e064a98be4d386fa8c19a") format("woff2"),
-url("./flaticon.eot?247d7e6d633e064a98be4d386fa8c19a#iefix") format("embedded-opentype"),
-url("./flaticon.svg?247d7e6d633e064a98be4d386fa8c19a#flaticon") format("svg");
+    src: url("./flaticon.ttf?61afe014fe28b1414e127bb92f6f9d3e") format("truetype"),
+url("./flaticon.woff?61afe014fe28b1414e127bb92f6f9d3e") format("woff"),
+url("./flaticon.woff2?61afe014fe28b1414e127bb92f6f9d3e") format("woff2"),
+url("./flaticon.eot?61afe014fe28b1414e127bb92f6f9d3e#iefix") format("embedded-opentype"),
+url("./flaticon.svg?61afe014fe28b1414e127bb92f6f9d3e#flaticon") format("svg");
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
@@ -21,12 +21,24 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
 .flaticon-calendar:before {
     content: "\f101";
 }
-.flaticon-food-delivery:before {
+.flaticon-facebook-logo:before {
     content: "\f102";
 }
-.flaticon-washing-machine:before {
+.flaticon-food-delivery:before {
     content: "\f103";
 }
-.flaticon-wipe:before {
+.flaticon-instagram:before {
     content: "\f104";
+}
+.flaticon-linkedin:before {
+    content: "\f105";
+}
+.flaticon-washing-machine:before {
+    content: "\f106";
+}
+.flaticon-wipe:before {
+    content: "\f107";
+}
+.flaticon-youtube:before {
+    content: "\f108";
 }
