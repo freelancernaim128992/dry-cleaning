@@ -10,19 +10,23 @@ const Services = () => {
     const serviceData = [
         {
             img: dryCleaning,
-            name: 'DRY CLEANING'
+            name: 'DRY CLEANING',
+            price: 342
         },
         {
             img: gowns,
-            name: 'WEEDING GOWNS'
+            name: 'WEEDING GOWNS',
+            price: 372
         },
         {
             img: leather,
-            name: 'LEATHER SUEDE'
+            name: 'LEATHER SUEDE',
+            price: 234
         },
         {
             img: curtains,
-            name: 'CURTAINS'
+            name: 'CURTAINS',
+            price: 155
         }
     ]
     return (

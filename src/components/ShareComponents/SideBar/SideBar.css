@@ -1,0 +1,18 @@
+.sidebar-container li{
+    padding: 15px 0;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+.sidebar-container li:hover {
+    background: #00608a;
+    text-align: center;
+}
+.sidebar-container li a {
+    text-decoration: none;
+    color: #23bcff;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.sidebar-container li:hover a{
+    color: white;
+}

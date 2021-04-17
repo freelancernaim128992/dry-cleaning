@@ -11,7 +11,7 @@ const HeaderMain = () => {
                     <div className="col-md-6 mt-4">
                         <h1 className="heading-style">Laundry and <br/> Dry Cleaning <br/>Services</h1>
                         <p className="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima cum mollitia iusto illum eveniet aperiam. Omnis optio molestiae temporibus maxime!</p>
-                        <Link to="/dashboard"><button className="btn btn-brand my-3">Order Now</button></Link>
+                        <Link to="/order"><button className="btn btn-brand my-3">Order Now</button></Link>
                     </div>
                     <div className="col-md-6 rounded">
                         <img src={headerImg} className="img-fluid rounded" alt=""/>
