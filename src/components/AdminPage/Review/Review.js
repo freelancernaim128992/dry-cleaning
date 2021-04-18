@@ -27,7 +27,7 @@ const Review = () => {
             description: `${comment}`,
             photo: `${photo}`
         }
-        const url = 'http://localhost:5000/addReviews';
+        const url = 'https://vast-savannah-28483.herokuapp.com/addReviews';
         fetch(url,{
             method:'POST',
             headers: {'content-type': 'application/json'},
@@ -48,7 +48,7 @@ const Review = () => {
                 <h1 className="ms-3">Share Your Review</h1>
                 <div className="form-container">
                     <div className="form-inner">
-                        <form onClick={handleReviews}>
+                        <form onSubmit={handleReviews}>
                             <div className="mb-5">
                                 <p>Upload a Image For Profile </p>
                                 <input onChange={handleImage} type="file" className="form-control p-3 shadow-lg border-0" />

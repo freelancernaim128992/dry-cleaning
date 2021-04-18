@@ -11,7 +11,7 @@ const Testimonials = () => {
     }
     const [testimonialData, setTestimonialData] = useState([])
     useEffect(() => {
-        const url = 'http://localhost:5000/reviews'
+        const url = 'https://vast-savannah-28483.herokuapp.com/reviews'
         fetch(url)
         .then(res => res.json())
         .then(data => setTestimonialData(data))

@@ -8,7 +8,7 @@ const MakeAdmin = () => {
         setAdminInfo(email);
     }
     const handleMakeAdmin = () =>{
-        const url = 'http://localhost:5000/adminList';
+        const url = 'https://vast-savannah-28483.herokuapp.com/adminList';
         fetch(url,{
             method:'POST',
             headers: {'content-type': 'application/json '},

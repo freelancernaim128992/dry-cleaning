@@ -29,7 +29,7 @@ const AddService = () => {
             price: `${price}`,
             photo: `${photo}`
         }
-        const url = 'http://localhost:5000/addServices';
+        const url = 'https://vast-savannah-28483.herokuapp.com/addServices';
         fetch(url,{
             method:'POST',
             headers: {'content-type': 'application/json'},
