@@ -8,7 +8,7 @@ const SideBar = () => {
     const [userInfo, setUserInfo] = useContext(UserContext);
     const [isAdmin, setIsAdmin] = useState(false);
     useEffect(() => {
-        const url = 'http://localhost:5000/isAdmin'
+        const url = 'https://vast-savannah-28483.herokuapp.com/isAdmin'
         fetch(url,{
             method: 'POST',
             headers: {'content-type': 'application/json'},
