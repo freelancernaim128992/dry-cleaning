@@ -11,18 +11,22 @@ const OurWorksSystem = () => {
     }
     const workSystemData = [
         {
+            id: 1,
             name: 'Collect Dirty Clothes',
             icon: 'flaticon-washing-machine'
         },
         {
+            id: 2,
             name: 'Choose Pickup Time',
             icon: 'flaticon-calendar'
         },
         {
+            id: 3,
             name: 'We’ll Clean & Dry',
             icon: 'flaticon-wipe'
         },
         {
+            id: 4,
             name: 'Deliver to Doorstep',
             icon: 'flaticon-food-delivery'
         }
@@ -37,7 +41,7 @@ const OurWorksSystem = () => {
             <div className="d-flex justify-content-center pt-5">
                 <div className="row w-75">
                     {
-                        workSystemData.map(info => <WorkSystemsCard info={info}></WorkSystemsCard>)
+                        workSystemData.map(info => <WorkSystemsCard key={info.id} info={info}></WorkSystemsCard>)
                     }
                 </div>
             </div>

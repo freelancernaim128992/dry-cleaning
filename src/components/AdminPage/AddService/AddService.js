@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import SideBar from '../../ShareComponents/SideBar/SideBar';
 
-const Review = () => {
+const AddService = () => {
     const [imageUrl, setImageUrl] = useState(null);
     const [image, setImage] = useState(false);
     const handleImage = (event) => {
@@ -18,16 +18,18 @@ const Review = () => {
             console.log(error);
           });
     }
-    const handleReviews = () => {
+    const handleServiceSubmit = () => {
         const title = document.getElementById('title').value;
-        const comment = document.getElementById('comment').value;
+        const price = document.getElementById('price').value;
+        const description = document.getElementById('description').value;
         const photo = imageUrl;
         const productData = {
             title: `${title}`,
-            description: `${comment}`,
+            description: `${description}`,
+            price: `${price}`,
             photo: `${photo}`
         }
-        const url = 'http://localhost:5000/addReviews';
+        const url = 'http://localhost:5000/addServices';
         fetch(url,{
             method:'POST',
             headers: {'content-type': 'application/json'},
@@ -39,28 +41,32 @@ const Review = () => {
             console.log(productData)
         })
     }
+
     return (
         <div className="row w-100">
             <div className="col-md-3">
                 <SideBar></SideBar>
             </div>
             <div className="col-md-9 mt-5">
-                <h1 className="ms-3">Share Your Review</h1>
+                <h1 className="ms-3">ADD SERVICE</h1>
                 <div className="form-container">
                     <div className="form-inner">
-                        <form onClick={handleReviews}>
+                        <form onSubmit={handleServiceSubmit}>
                             <div className="mb-5">
-                                <p>Upload a Image For Profile </p>
+                                <p>Upload a Image For Service </p>
                                 <input onChange={handleImage} type="file" className="form-control p-3 shadow-lg border-0" />
-                                {image && <p className="text-success">Image Upload successFully</p>}
+                                {image && <p>Image Selected</p>}
                             </div>
                             <div className="mb-5">
-                                <input type="text" className="form-control p-3 shadow-lg border-0" name="title" placeholder="Subject" id="title" />
+                                <input type="text" name="title" className="form-control p-3 shadow-lg border-0" placeholder="Service Title" id="title" />
+                            </div>
+                            <div className="mb-5">
+                                <input type="text" name="price" className="form-control p-3 shadow-lg border-0" placeholder="Price" id="price" />
                             </div>
                             <div className="form-floating mb-5 shadow-lg">
-                                <textarea className="form-control border-0" placeholder="Leave a comment here" id="floatingTextarea2" name="comment" id="comment" style={{height: '100px'}}></textarea>
-                                <label htmlFor="floatingTextarea2">Comments</label>
+                                <input type="text" name="description" className="form-control p-3 shadow-lg border-0" placeholder="Description" style={{height: '100px'}} id="description" />
                             </div>
+                            
                             <button type="submit" className="btn btn-brand">Submit</button>
                         </form>
                     </div>
@@ -70,4 +76,4 @@ const Review = () => {
     );
 };
 
-export default Review;
+export default AddService;

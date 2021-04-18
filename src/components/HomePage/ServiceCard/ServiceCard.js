@@ -17,11 +17,11 @@ const ServiceCard = ({info}) => {
     return (
         <div className="col-md-3 text-center">
             <div>
-                <img onClick={handleService} src={info.img} className="img-fluid image-style" alt=""/>
+                <img onClick={handleService} src={info.photo} className="img-fluid image-style" alt=""/>
             </div>
             <div className="mt-5">
-                <h4>{info.name}</h4>
-                <p className="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid minima expedita cumque veritatis, nemo error.</p>
+                <h4>{info.title}</h4>
+                <p className="text-secondary">{info.description}</p>
                 <h5>$ {info.price}</h5>
             </div>
         </div>

@@ -1,10 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import testimonialBg from '../../../images/testimonialBg.png'
 import TestimonialCard from '../TestimonialCard/TestimonialCard'
-import mark from '../../../images/mark.jpg'
-import jhon from '../../../images/jhon.jpg'
-import jenny from '../../../images/jenny.jpg'
-import tyrese from '../../../images/tyrese.jpg'
 
 const Testimonials = () => {
     const testimonialBgStyle = {
@@ -13,24 +9,13 @@ const Testimonials = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center'
     }
-    const testimonialData = [
-        {
-            name: 'Mark Wood',
-            img: mark
-        },
-        {
-            name: 'Jhon Joe',
-            img: jhon
-        },
-        {
-            name: 'Jenny Stewe',
-            img: jenny
-        },
-        {
-            name: 'Tyrese Gibson',
-            img: tyrese
-        }
-    ]
+    const [testimonialData, setTestimonialData] = useState([])
+    useEffect(() => {
+        const url = 'http://localhost:5000/reviews'
+        fetch(url)
+        .then(res => res.json())
+        .then(data => setTestimonialData(data))
+    }, [])
     return (
         <section className="py-5" style={testimonialBgStyle}>
             <div className="text-center">
@@ -40,7 +25,7 @@ const Testimonials = () => {
             <div className="d-flex justify-content-center pt-5">
                 <div className="row w-75">
                     {
-                        testimonialData.map(info => <TestimonialCard testimonialInfo={info}></TestimonialCard>)
+                        testimonialData.map(info => <TestimonialCard key={info._id} testimonialInfo={info}></TestimonialCard>)
                     }
                 </div>
             </div>

@@ -1,34 +1,16 @@
-import React from 'react';
-import dryCleaning from '../../../images/dry-cleaning.jpg'
-import gowns from '../../../images/gowns.jpg'
-import leather from '../../../images/leather.jpeg'
-import curtains from '../../../images/curtains.png'
+import React, { useEffect, useState } from 'react';
 import ServiceCard from '../ServiceCard/ServiceCard';
 import { Link } from 'react-router-dom';
 
 const Services = () => {
-    const serviceData = [
-        {
-            img: dryCleaning,
-            name: 'DRY CLEANING',
-            price: 342
-        },
-        {
-            img: gowns,
-            name: 'WEEDING GOWNS',
-            price: 372
-        },
-        {
-            img: leather,
-            name: 'LEATHER SUEDE',
-            price: 234
-        },
-        {
-            img: curtains,
-            name: 'CURTAINS',
-            price: 155
-        }
-    ]
+    const [serviceData, setServiceData] = useState([]);
+    useEffect(() => {
+        const url = 'http://localhost:5000/services';
+        fetch(url)
+        .then(res => res.json())
+        .then(data => setServiceData(data))
+    } ,[])
+    console.log(serviceData)
     return (
         <section className="py-5">
             <div className="text-center">
@@ -38,9 +20,9 @@ const Services = () => {
             <div className="d-flex justify-content-center pt-5">
                 <div className="row w-75">
                     {
-                        serviceData.map(serviceInfo => <ServiceCard info={serviceInfo}></ServiceCard>)
+                        serviceData.map(serviceInfo => <ServiceCard key={serviceInfo._id} info={serviceInfo}></ServiceCard>)
                     }
-                </div>
+                </div> 
             </div>
             <div className="d-flex justify-content-center">
                 <Link to="/"><button className="btn btn-brand">Explore More</button></Link>

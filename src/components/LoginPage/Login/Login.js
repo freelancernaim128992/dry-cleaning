@@ -30,7 +30,9 @@ const Login = () => {
             const user = result.user;
             const email = user.email;
             const photoURL = user.photoURL;
-            const newUser = {email: email,photoURL: photoURL}
+            const newUser = {...userInfo}
+            newUser.email = email;
+            newUser.photoURL = photoURL;
             setUserInfo(newUser);
             history.replace(from);
             getUserToken();
