@@ -9,10 +9,12 @@ import AddService from "./components/AdminPage/AddService/AddService";
 import AdminContainer from "./components/AdminPage/AdminContainer/AdminContainer";
 import MakeAdmin from "./components/AdminPage/MakeAdmin/MakeAdmin";
 import Review from "./components/AdminPage/Review/Review";
+import BlogPage from "./components/BlogPage/BlogPage";
 import Home from "./components/HomePage/Home/Home";
 import Login from "./components/LoginPage/Login/Login";
 import PrivateRoute from "./components/LoginPage/PrivateRoute/PrivateRoute";
 import NoMatch from "./components/NoMatch/NoMatch";
+import ServicePage from "./components/ServicePage/ServicePage";
 export const UserContext = createContext();
 
 function App() {
@@ -26,6 +28,12 @@ function App() {
           </Route>
           <Route path="/home">
             <Home />
+          </Route>
+          <Route path="/services">
+            <ServicePage />
+          </Route>
+          <Route path="/blogs">
+            <BlogPage />
           </Route>
           <Route path="/login">
             <Login />

@@ -7,22 +7,21 @@ const Services = () => {
     useEffect(() => {
         const url = 'https://vast-savannah-28483.herokuapp.com/services';
         fetch(url)
-        .then(res => res.json())
-        .then(data => setServiceData(data))
-    } ,[])
-    console.log(serviceData)
+            .then(res => res.json())
+            .then(data => setServiceData(data))
+    }, [])
     return (
-        <section className="py-5">
+        <section className="py-5" style={{ backgroundColor: '#f7f7f7' }}>
             <div className="text-center">
                 <h5 className="mt-5 fw-bold textStyle">SERVICES LIST</h5>
                 <h1 className="my-5">Always the Best Service</h1>
             </div>
-            <div className="d-flex justify-content-center pt-5">
+            <div className="d-flex justify-content-center py-5">
                 <div className="row w-75">
                     {
                         serviceData.map(serviceInfo => <ServiceCard key={serviceInfo._id} info={serviceInfo}></ServiceCard>)
                     }
-                </div> 
+                </div>
             </div>
             <div className="d-flex justify-content-center">
                 <Link to="/"><button className="btn btn-brand">Explore More</button></Link>

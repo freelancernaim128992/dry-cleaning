@@ -1,9 +1,9 @@
 import React from 'react';
 import './WorkSystemsCard.css'
 
-const WorkSystemsCard = ({info}) => {
+const WorkSystemsCard = ({ info }) => {
     return (
-        <div className="col-md-3 text-center">
+        <div className="col-md-3 text-center card-style">
             <div className="d-flex justify-content-center text-center">
                 <div className="icon">
                     <i className={info.icon}></i>

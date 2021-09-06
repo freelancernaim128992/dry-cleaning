@@ -1,17 +1,48 @@
-.nav-container{
-    padding: 10px;
+.nav-container {
+  padding: 10px;
 }
-.logo-style{
-    width: 200px;
+.logo-style {
+  width: 200px;
 }
-.menu-container{
-    width: 700px;
-    margin: auto;
-    font-weight: 700;
+.menu-container {
+  width: 700px;
+  margin: auto;
+  font-weight: 700;
 }
-.menu-container li a{
-    color: #00608a !important;
+.menu-container li a {
+  color: #00608a !important;
 }
-.menu-container li a:hover{
-    color: #29beff !important;
+.menu-container li a:hover {
+  color: #29beff !important;
+}
+.profileImg {
+  width: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.profile ul {
+  list-style: none;
+  background-color: #00608a;
+  padding: 10px;
+  text-align: center;
+}
+
+.profile ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.profile {
+  position: absolute;
+  left: -58px;
+  top: 60px;
+  width: 160px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.7s;
+}
+.active {
+  transform: scaleY(1);
 }

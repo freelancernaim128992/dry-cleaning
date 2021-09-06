@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FooterCol = ({title, menuInfo, children}) => {
+const FooterCol = ({ title, menuInfo, children }) => {
     return (
         <div className="col-md-3 mt-5">
             <h5 className="">{title ? title : ''}</h5>

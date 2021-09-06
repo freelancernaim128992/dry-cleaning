@@ -13,11 +13,11 @@ const Testimonials = () => {
     useEffect(() => {
         const url = 'https://vast-savannah-28483.herokuapp.com/reviews'
         fetch(url)
-        .then(res => res.json())
-        .then(data => setTestimonialData(data))
+            .then(res => res.json())
+            .then(data => setTestimonialData(data))
     }, [])
     return (
-        <section className="py-5" style={testimonialBgStyle}>
+        <section id="review" className="py-5" style={testimonialBgStyle}>
             <div className="text-center">
                 <h5 className="mt-5 fw-bold textStyle">TESTIMONIALS</h5>
                 <h1 className="my-5">What They Are Talking</h1>

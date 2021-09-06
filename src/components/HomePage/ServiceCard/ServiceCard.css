@@ -1,8 +1,8 @@
-.image-style:hover{
-    transform: translate3d(15px, -50px, 10px);
+.image-style:hover {
+  transform: translate3d(15px, -50px, 10px);
 }
 
-.image-style{
-    height: 200px;
-    transition: .5s;
+.image-style {
+  height: 200px;
+  transition: 0.5s;
 }

@@ -4,25 +4,25 @@ import './Footer.css'
 
 const Footer = () => {
     const noNamed = [
-        {name: 'H#234 (0th Floor), Road #30', id: 1},
-        {name: 'New DOHS, Dhanmondi,Dhaka,Bangladesh', id: 2}
+        { name: 'H#234 (0th Floor), Road #30', id: 1 },
+        { name: 'New DOHS, Dhanmondi,Dhaka,Bangladesh', id: 2 }
     ]
     const company = [
-        {name: 'About', id: 3},
-        {name: 'Services', id: 4},
-        {name: 'Testimonial', id: 5},
-        {name: 'Terms of conditions', id: 6},
-        {name: 'Submit Listing', id: 7}
+        { name: 'About', id: 3 },
+        { name: 'Services', id: 4 },
+        { name: 'Testimonial', id: 5 },
+        { name: 'Terms of conditions', id: 6 },
+        { name: 'Submit Listing', id: 7 }
     ]
     const quickLink = [
-        {name: 'Quick Links', id: 8},
-        {name: 'Rentals', id: 9},
-        {name: 'Orders', id: 10},
-        {name: 'Contact', id: 11},
-        {name: 'Our Blog', id: 12}
+        { name: 'Quick Links', id: 8 },
+        { name: 'Rentals', id: 9 },
+        { name: 'Orders', id: 10 },
+        { name: 'Contact', id: 11 },
+        { name: 'Our Blog', id: 12 }
     ]
     const about = [
-        {name: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo consequatur laboriosam eligendi possimus quos accusantium ullam fuga nam harum eos!',id:13}
+        { name: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo consequatur laboriosam eligendi possimus quos accusantium ullam fuga nam harum eos!', id: 13 }
     ]
     return (
         <footer className="pt-5">
