@@ -37,6 +37,8 @@ const Login = () => {
                 setUserInfo(newUser);
                 history.replace(from);
                 getUserToken();
+                sessionStorage.setItem('email', email)
+                sessionStorage.setItem('photo', photoURL)
             }).catch((error) => {
                 // Handle Errors here.
                 var errorCode = error.code;

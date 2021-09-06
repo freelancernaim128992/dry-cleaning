@@ -10,17 +10,14 @@ const Navbar = () => {
   const handleImg = () => {
     const showDiv = document.getElementById("profile")
     showDiv.classList.toggle("active")
-
   }
-
-  // window.addEventListener('scroll', () => {
-  //   const navbar = document.getElementById('parentNav')
-  //   const scrollTop = window.scrollY;
-  //   if (scrollTop > 80) {
-  //     navbar.classList.add('bg-white fixed-top')
-  //   }
-  //   console.log(scrollTop)
-  // })
+  let photo;
+  console.log(photoURL);
+  if (photoURL == undefined) {
+    photo = sessionStorage.getItem('photo');
+  } else if (photoURL != undefined) {
+    photo = photoURL;
+  }
   return (
     <header>
       <div id="parentNav" className="nav-container rounded">
@@ -53,7 +50,7 @@ const Navbar = () => {
               {
                 email || sessionStorage.getItem('token') ?
                   <div className="position-relative">
-                    <img onClick={handleImg} className="profileImg" src={photoURL} alt="" />
+                    <img onClick={handleImg} className="profileImg" src={photo} alt="" />
                     <div className="profile" id="profile">
                       <ul>
                         <li>
