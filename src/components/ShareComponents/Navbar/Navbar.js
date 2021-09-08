@@ -13,11 +13,12 @@ const Navbar = () => {
   }
   let photo;
   console.log(photoURL);
-  if (photoURL == undefined) {
+  if (photoURL === undefined) {
     photo = sessionStorage.getItem('photo');
-  } else if (photoURL != undefined) {
+  } else if (photoURL !== undefined) {
     photo = photoURL;
   }
+  console.log(sessionStorage.getItem('photo'));
   return (
     <header>
       <div id="parentNav" className="nav-container rounded">

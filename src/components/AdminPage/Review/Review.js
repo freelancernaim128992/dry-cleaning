@@ -10,13 +10,13 @@ const Review = () => {
         imageData.set('key', '97e094938ac70815786a7149e170c33d')
         imageData.append('image', event.target.files[0])
         axios.post('https://api.imgbb.com/1/upload', imageData)
-          .then(function (response) {
-            setImageUrl(response.data.data.display_url);
-            setImage(true)
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
+            .then(function (response) {
+                setImageUrl(response.data.data.display_url);
+                setImage(true)
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     }
     const handleReviews = () => {
         const title = document.getElementById('title').value;
@@ -27,17 +27,17 @@ const Review = () => {
             description: `${comment}`,
             photo: `${photo}`
         }
-        const url = 'https://vast-savannah-28483.herokuapp.com/addReviews';
-        fetch(url,{
-            method:'POST',
-            headers: {'content-type': 'application/json'},
+        const url = 'https://aqueous-coast-40888.herokuapp.com/addReviews';
+        fetch(url, {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
             body: JSON.stringify(productData)
         })
-        .then(res => console.log('data come'))
-        .then(result => {
-            console.log('data create successfully')
-            console.log(productData)
-        })
+            .then(res => console.log(res))
+            .then(result => {
+                console.log('data create successfully')
+                console.log(productData)
+            })
     }
     return (
         <div className="row w-100">
@@ -58,13 +58,13 @@ const Review = () => {
                                 <input type="text" className="form-control p-3 shadow-lg border-0" name="title" placeholder="Subject" id="title" />
                             </div>
                             <div className="form-floating mb-5 shadow-lg">
-                                <textarea className="form-control border-0" placeholder="Leave a comment here" id="floatingTextarea2" name="comment" id="comment" style={{height: '100px'}}></textarea>
+                                <textarea className="form-control border-0" placeholder="Leave a comment here" id="floatingTextarea2" name="comment" id="comment" style={{ height: '100px' }}></textarea>
                                 <label htmlFor="floatingTextarea2">Comments</label>
                             </div>
                             <button type="submit" className="btn btn-brand">Submit</button>
                         </form>
                     </div>
-            </div>
+                </div>
             </div>
         </div>
     );

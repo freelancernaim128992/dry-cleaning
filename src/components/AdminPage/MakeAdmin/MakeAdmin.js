@@ -4,20 +4,20 @@ import SideBar from '../../ShareComponents/SideBar/SideBar';
 const MakeAdmin = () => {
     const [adminInfo, setAdminInfo] = useState({});
     const handleBlur = (e) => {
-        const email = {email: e.target.value};
+        const email = { email: e.target.value };
         setAdminInfo(email);
     }
-    const handleMakeAdmin = () =>{
-        const url = 'https://vast-savannah-28483.herokuapp.com/adminList';
-        fetch(url,{
-            method:'POST',
-            headers: {'content-type': 'application/json '},
+    const handleMakeAdmin = () => {
+        const url = 'https://aqueous-coast-40888.herokuapp.com/adminList';
+        fetch(url, {
+            method: 'POST',
+            headers: { 'content-type': 'application/json ' },
             body: JSON.stringify(adminInfo)
         })
-        .then(res => res.json())
-        .then(result => {
-            console.log(result,'successFully Connected')
-        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result, 'successFully Connected')
+            })
     }
     return (
         <div className="row w-100">
@@ -35,7 +35,7 @@ const MakeAdmin = () => {
                             <button type="submit" className="btn btn-brand">Submit</button>
                         </form>
                     </div>
-            </div>
+                </div>
             </div>
         </div>
     );

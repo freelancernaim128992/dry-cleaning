@@ -10,6 +10,7 @@ import AdminContainer from "./components/AdminPage/AdminContainer/AdminContainer
 import MakeAdmin from "./components/AdminPage/MakeAdmin/MakeAdmin";
 import Review from "./components/AdminPage/Review/Review";
 import BlogPage from "./components/BlogPage/BlogPage";
+import ContactPage from "./components/ContactPage/ContactPage";
 import Home from "./components/HomePage/Home/Home";
 import Login from "./components/LoginPage/Login/Login";
 import PrivateRoute from "./components/LoginPage/PrivateRoute/PrivateRoute";
@@ -34,6 +35,9 @@ function App() {
           </Route>
           <Route path="/blogs">
             <BlogPage />
+          </Route>
+          <Route path="/contact">
+            <ContactPage />
           </Route>
           <Route path="/login">
             <Login />
