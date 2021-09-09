@@ -10,11 +10,15 @@ const Testimonials = () => {
         backgroundPosition: 'center'
     }
     const [testimonialData, setTestimonialData] = useState([])
+    const [spinner, setSpinner] = useState(false);
     useEffect(() => {
         const url = 'https://aqueous-coast-40888.herokuapp.com/reviews'
         fetch(url)
             .then(res => res.json())
-            .then(data => setTestimonialData(data))
+            .then(data => {
+                setTestimonialData(data)
+                setSpinner(true)
+            })
     }, [])
     return (
         <section id="review" className="py-5" style={testimonialBgStyle}>
@@ -23,11 +27,19 @@ const Testimonials = () => {
                 <h1 className="my-5">What They Are Talking</h1>
             </div>
             <div className="d-flex justify-content-center pt-5">
-                <div className="row w-75">
-                    {
-                        testimonialData.map(info => <TestimonialCard key={info._id} testimonialInfo={info}></TestimonialCard>)
-                    }
-                </div>
+                {
+                    spinner ?
+                        <div className="row w-75">
+                            {
+                                testimonialData.map(info => <TestimonialCard key={info._id} testimonialInfo={info}></TestimonialCard>)
+                            }
+                        </div>
+                        : <div className="d-flex justify-content-center">
+                            <div id="spinner" className="spinner-border text-primary text-center" role="status">
+                                <span className="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                }
             </div>
         </section>
     );
